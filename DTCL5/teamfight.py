@@ -1,7 +1,9 @@
 from os import name
 import numpy as np
 import pandas as pd
+import random
 
+# Lay du lieu
 df_champ = pd.read_csv("champ.csv", header=None)
 df_trait = pd.read_csv("Traits.csv", header=None)
 
@@ -12,7 +14,6 @@ df_trait[1] = df_trait[1].apply(lambda x: set([int(t) for t in x.split(',')]))
 dict_traits = {}
 
 for i in range(len(df_trait[0])):
-
     name = df_trait[0][i]
     champs = df_trait[1][i]
     ranks = df_trait[2][i]
@@ -33,7 +34,6 @@ def get_all_predict_champ(team):
         
     return list(champs)
 
-import random
 
 def random_team(n_champ, team_tmp):
     team = team_tmp.copy()

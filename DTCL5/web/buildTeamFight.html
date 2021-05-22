@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Building Team Fight</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/randomTeam.css">
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+        
+        <div class="container-fluid">
+
+            <div class="row text-center" id="header">
+                <!-- <span>
+                    <img src="./image/avatar.png" alt="avatar" id="avatar">
+                </span> -->
+                <h1 class="text-center text-header">Building Team Fight</h1>
+                <form id="form-roll">
+                    <div class="form-group">
+                        <input type="number" id="num-champion" value="8" class="form-control" min="1" max="9">
+                        <a href="#" id="roll" class="btn btn-primary">Roll</a>
+                    </div>
+                </form>
+            </div>
+            
+            
+            
+            <div class="row" id="formmation">
+                <div class="col-xs-1" id="show-traits">
+                    
+                </div>
+                
+                <div class="col-xs-10" id="show-all-champions">
+
+                    <div class="row" id="content">
+                        <div class="col-xs-6" id="show-toc">
+                            <div>
+                                <h2 style="color: white;margin:0;margin-left: -0.5em;">TỘC</h2>
+                            </div>
+
+                        </div>
+                        <div class="col-xs-6" id="show-he">
+                            <div>
+                                <h2 style="color: white;margin:0;margin-left: -0.5em;">HỆ</h2>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div id="show-team">
+                        
+                        
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="toc" class="data hidden">
+            Suy Vong|0,1,2,3,4,5,6,7,30|3,6,9
+            Ma Sứ|8,9,10,11,12,13,16,25|2,4,6,8
+            Tiên Hắc Ám|14,15,16|3
+            Ác Quỷ|17,18,19,20,21,22|3,5,7
+            Đồ Long|23,24,25,26|2,4
+            Thây Ma|27,28,29,30|3,5
+            Thiên Thần|31,32,33,34,35,36,45,52|3,6,9
+            Thần Sứ|37,38,39,40,41,42,43|2,4,6,8
+            Tiên Tộc|44,45|2,4
+            Long Tộc|46,47,48,49,50|3,5
+            Thiết Giáp|51,52,53|2,3
+            Vĩnh Hằng|54|1
+            Tà Thần|55,56,57|2,3
+        </div>
+        <div id="he" class="data hidden">
+            Sát Thủ|5,7,15,25,38,55|2,4,6
+            Cung Thủ|0,12,34,48,54|2,4
+            Đấu Sĩ|1,29,37,47,57|2,4
+            Quân Đoàn|6,11,26,27,31,41,45|2,4,6,8
+            Tái Tạo|8,14,39,50,56|2,4
+            Thuật Sĩ|22,33,42,56|2,4
+            Hiệp Sĩ|3,19,32,44,51,13,43|2,4,6
+            Ma Pháp Sư|4,17,28,36,49|2,4
+            Chiến Binh|7,10,20,23,24,40,46,53|3,6
+            Bí Ẩn|16,21,30,35,54|2,3,4
+            Kỵ Sĩ|2,9,18,52|2,3,4
+            Quỷ Vương|22|1
+            Thần Vương|13,43|1
+            Luyện Rồng|50|1
+        </div>
+        <div id="champions" class="data hidden">
+            Vayne,1,Suy Vong-Cung Thủ
+            Warwick,1,Suy Vong-Đấu Sĩ
+            Hecarim ,2,Suy Vong-Kỵ Sĩ
+            Thresh,2,Suy Vong-Hiệp Sĩ
+            Viktor,2,Suy Vong-Ma Pháp Sư
+            Katarina,3,Suy Vong-Sát Thủ
+            Draven,4,Suy Vong-Quân Đoàn
+            Viego,5,Suy Vong-Chiến Binh-Sát Thủ
+            Vladimir,1,Ma Sứ-Tái Tạo
+            Sejuani,2,Ma Sứ-Kỵ Sĩ
+            Lee Sin,3,Ma Sứ-Chiến Binh
+            Yasuo,3,Ma Sứ-Quân Đoàn
+            Aphelios,4,Ma Sứ-Cung Thủ
+            Darius,5,Hiệp Sĩ-Ma Sứ-Thần Vương
+            Lissandra,1,Tiên Hắc Ám-Tái Tạo
+            LeBlanc,2,Tiên Hắc Ám-Sát Thủ
+            Morgana,3,Tiên Hắc Ám-Ma Sứ-Bí Ẩn
+            Ziggs,1,Ác Quỷ-Ma Pháp Sư
+            Kled,1,Ác Quỷ-Kỵ Sĩ
+            Poppy,1,Ác Quỷ-Hiệp Sĩ
+            Kennen,2,Ác Quỷ-Chiến Binh
+            Lulu,3,Ác Quỷ-Bí Ẩn
+            Teemo,6 Máu,Ác Quỷ-Quỷ Vương-Thuật Sĩ
+            Trundle,2,Đồ Long-Chiến Binh
+            Pantheon,3,Đồ Long-Chiến Binh
+            Diana,4,Đồ Long-Ma Sứ-Sát Thủ
+            Mordekaiser,4,Đồ Long-Quân Đoàn
+            Kalista,1,Thây Ma-Quân Đoàn
+            Brand,2,Thây Ma-Ma Pháp Sư
+            Nunu,3,Thây Ma-Đấu Sĩ
+            Ryze,4,Thây Ma-Suy Vong-Bí Ẩn
+            Aatrox,1,Thiên Thần-Quân Đoàn
+            Leona,1,Thiên Thần-Hiệp Sĩ
+            Syndra,2,Thiên Thần-Thuật Sĩ
+            Varus,2,Thiên Thần-Cung Thủ
+            Lux,3,Thiên Thần-Bí Ẩn
+            Vel'Koz,4,Thiên Thần-Ma Pháp Sư
+            Gragas,1,Thần Sứ-Đấu Sĩ
+            Kha'Zix,1,Thần Sứ-Sát Thủ
+            Soraka,2,Thần Sứ-Tái Tạo
+            Nidalee,3,Thần Sứ-Chiến Binh
+            Riven,3,Thần Sứ-Quân Đoàn
+            Karma,4,Thần Sứ-Thuật Sĩ
+            Garen,5,Hiệp Sĩ-Thần Sứ-Thần Vương
+            Taric,4,Tiên Tộc-Hiệp Sĩ
+            Kayle,5,Tiên Tộc-Thiên Thần-Quân Đoàn
+            Udyr,1,Long Tộc-Chiến Binh
+            Sett,2,Long Tộc-Đấu Sĩ
+            Ashe,3,Tiên Tộc-Long Tộc-Cung Thủ
+            Zyra,3,Long Tộc-Ma Pháp Sư
+            Heimerdinger,5,Long Tộc-Tái Tạo-Luyện Rồng
+            Nautilus,2,Thiết Giáp-Hiệp Sĩ
+            Rell,3,Thiết Giáp-Thiên Thần-Kỵ Sĩ
+            Jax,4,Thiết Giáp-Chiến Binh
+            Kindred,5,Vĩnh Hằng-Cung Thủ-Bí Ẩn
+            Nocturne,3,Tà Thần-Sát Thủ
+            Ivern,4,Tà Thần-Thuật Sĩ-Tái Tạo
+            Volibear,5,Tà Thần-Đấu Sĩ
+        </div>
+ 
+        <div id="cell-example" class="champion hidden">
+            <div class="card">
+                <img class="card-img-top" id="img-top" alt="Card image cap">
+                
+                <div id="trait">
+                    <!-- <p>Thần Vương</p>
+                    <p>Ma sứ</p> -->
+                </div>
+        
+                <div class="card-body" id="name-champion">
+                    <!-- <h5 class="card-title" id="name-champion">Darius <span id="price">5 G</span></h5> -->
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="./js/buildTeam.js"></script>
+    </body>
+</html>

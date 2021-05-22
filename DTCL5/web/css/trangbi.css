@@ -1,0 +1,141 @@
+body{
+    background-image: url("../image/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.hidden{
+    display: none;
+}
+img#matran
+{
+    height: 80vh;
+    width: 37.9vw;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin: 0 auto;
+}
+
+#matranhide{
+    background: transparent;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    height: 80vh;
+    width: 37.9vw;
+    top: 0%;
+    position: absolute;
+    left: 31.3%;
+}
+
+#matranhide .myrow
+{
+    display: flex;
+    background-color: bisque;
+    height: 9.8%;
+    width: 100%;
+    background: transparent;
+    position: relative;
+    margin: 0px 0px 0px 13px;
+}
+
+#matranhide .myrow .cell {
+    /* background: transparent; */
+    margin: 4px 5px 0px 0px;
+    height: 97%;
+    width: 8.8%;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 9px;
+}
+
+#matranhide .myrow .infomation {
+    position: absolute;
+    /* top: -30px; */
+    background-color: white;
+    display: none;
+    z-index: 10;
+    width: max-content;
+    max-width: 400px;;
+    padding: 10px;
+}
+
+#matranhide .myrow:nth-child(1) .cell:nth-child(1)
+{
+    opacity: 0;
+}
+/* 
+#matranhide .myrow .cell:nth-child(1) + .infomation
+{
+    left: 80px;
+}
+#matranhide .myrow .cell:nth-child(3) + .infomation
+{
+    left: 130px;
+}
+#matranhide .myrow .cell:nth-child(5) + .infomation
+{
+    left: 190px;
+}
+#matranhide .myrow .cell:nth-child(7) + .infomation
+{
+    left: 240px;
+}
+#matranhide .myrow .cell:nth-child(9) + .infomation
+{
+    left: 290px;
+}
+#matranhide .myrow .cell:nth-child(11) + .infomation
+{
+    left: 350px;
+}
+#matranhide .myrow .cell:nth-child(13) + .infomation
+{
+    left: 410px;
+}
+#matranhide .myrow .cell:nth-child(15) + .infomation
+{
+    left: 460px;
+}
+#matranhide .myrow .cell:nth-child(17) + .infomation
+{
+    left: 520px;
+}
+#matranhide .myrow .cell:nth-child(19) + .infomation
+{
+    left: 570px;
+}
+
+#matranhide .myrow:nth-child(8) .cell + .infomation
+{
+    top: -300px;
+}
+#matranhide .myrow:nth-child(9) .cell + .infomation
+{
+    top: -300px;
+}
+#matranhide .myrow:nth-child(10) .cell + .infomation
+{
+    top: -300px;
+} */
+
+
+#matranhide .myrow .cell:hover{
+    opacity: 0;
+}
+
+/* #matranhide .myrow .cell:hover + .infomation {
+    display: block !important;
+} */
+
+table td, table th {
+    padding: 10px;
+}
+table td li {
+    list-style: none;
+
+}
+table td ul
+{
+    padding: 0px;
+}
